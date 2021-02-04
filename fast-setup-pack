@@ -1,0 +1,52 @@
+#!/bin/bash
+
+echo "### Instalação basica de programas necessários ###"
+
+echo "Instalando Google Chrome"
+
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+
+echo "========================================================================="
+
+echo "Instalando Spotify"
+
+sudo snap install spotify
+
+echo "========================================================================="
+
+echo "Instalando VS Code"
+
+sudo snap install --classic code
+
+echo "========================================================================="
+
+echo "Instalando Docker"
+
+sudo apt-get install docker docker-compose -y
+
+echo "========================================================================="
+
+echo "Instalando GIT"
+
+sudo apt-get install
+
+echo "========================================================================="
+
+echo "Instalando Steam"
+
+wget https://steamcdn-a.akamaihd.net/client/installer/steam.deb
+
+sudo dpkg -i steam.deb
+
+echo "========================================================================="
+
+
+echo "Instalando Teams"
+
+wget "https://teams.microsoft.com/downloads/desktopurl?env=production&plat=linux&arch=x64&download=true&linuxArchiveType=deb" -O teams.deb
+
+sudo apt install ./teams.deb -y
+
+echo "### Instalação concluida ###"
