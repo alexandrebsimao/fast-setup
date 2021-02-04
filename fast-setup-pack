@@ -2,9 +2,15 @@
 
 echo "### Instalação basica de programas necessários ###"
 
+echo "Atualizando Repositorios"
+
+sudo apt-get update
+
 echo "Instalando Google Chrome"
 
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+
+sudo chmod 777 google-chrome-stable_current_amd64.deb
 
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 
@@ -38,6 +44,8 @@ echo "Instalando Steam"
 
 wget https://steamcdn-a.akamaihd.net/client/installer/steam.deb
 
+sudo chmod 777 steam.deb
+
 sudo dpkg -i steam.deb
 
 echo "========================================================================="
@@ -47,6 +55,14 @@ echo "Instalando Teams"
 
 wget "https://teams.microsoft.com/downloads/desktopurl?env=production&plat=linux&arch=x64&download=true&linuxArchiveType=deb" -O teams.deb
 
+sudo chmod 777 teams.deb
+
 sudo apt install ./teams.deb -y
+
+echo "### Excluindo arquivos ###"
+
+sudo rm -f steam.deb
+sudo rm -f teams.deb
+sudo rm -f google-chrome-stable_current_amd64.deb
 
 echo "### Instalação concluida ###"
